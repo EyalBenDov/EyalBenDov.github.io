@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+  	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="about"></div>
+	  <nav>
+		  <div id="nav-left">
+			  <p id="me">Eyal Ben-Dov</p>
+		  </div>
+		  <div class="nav-center">
+		  	<a href="#about" class="nav-link">About</a>
+			<a href="#projects" class="nav-link">Projects</a>
+			<a class="nav-link">Education</a>
+		  	<a class="nav-link">Experience</a>
+		  </div>
+		  <div class="nav-right">
+			  <p>right</p>
+		  </div>
+	  </nav>
+	<div id="about_container">
+		<div id="about_me">
+			<div id="about_center">
+				<div id="about_paragraph">
+					<h1>Eyal Ben-Dov</h1>
+	
+					<p>I'm a student at Cambridge Ringe and Latin. My favorite subjects are Math and Computer Science. I like playing Chess, and video games.</p>
+				</div>
+				<img src="bird.jpg" alt="bird" id="profile_picture">
+			</div>
+		</div>
+	</div>
+	<div id="projects"></div>
+	<div id="projects_container">
+		<h2 id="projects_header">Projects</h2>
+	</div>
+	
+  <script src="script.js"></script>
+</body>
+
+</html>
