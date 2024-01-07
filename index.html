@@ -4,27 +4,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-  	<title>Eyal Ben-Dov</title>
+	<title>Eyal Ben-Dov</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="favicon.png" />
+	<link rel="icon" type="image/x-icon" href="img/favicon.png" />
 
 </head>
 
 <body>
 	<nav>
-		<div id="profile_picture">
-			<img src="bird.jpg" alt="bird" id="profile_picture">
+		<!-- <div id="nav-top"><h3 id="me-nav">Eyal Ben-Dov</h3></div> -->
+		<div id="nav-center">
+			<div id="profile_picture">
+				<img src="img/image.jpg" alt="profile_picture" id="profile_picture">
+			</div>
+			<div id="links">
+				<a href="#about" class="nav-link">About</a>
+				<a href="#projects" class="nav-link">Projects</a>
+				<a href="#skills" class="nav-link">Skills</a>
+				<a href="#experience" class="nav-link">Experience</a>
+			</div>
 		</div>
-		<div id="links">
-			<a href="#about" class="nav-link">About</a>
-			<a href="#projects" class="nav-link">Projects</a>
-			<a class="nav-link">Skills</a>
-			<a class="nav-link">Education</a>
-			<a class="nav-link">Experience</a>
-		</div>
+		<!-- <div id="nav-bottom"></div> -->
 	</nav>
 	<div class="page">
 		<div id="about"></div>
@@ -33,29 +36,36 @@
 				<div id="about_center">
 					<div id="about_paragraph">
 						<h1>Eyal Ben-Dov</h1>
-		
-						<p>I'm a student at Cambridge Ringe and Latin. My favorite subjects are Math and Computer Science. I like playing Chess, and video games.</p>
+
+						<p>I'm a student at Cambridge Rindge and Latin. My favorite subjects are Math and Computer
+							Science. I like playing Chess and video games.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="projects"></div>
 		<div id="projects_container">
-			<h2 id="projects_header">Projects</h2>
+			<div class="gap"></div>
+			<header>Projects</header>
+			<div class="gap"></div>
 			<div id="projects_grid">
-				<div id="project1" class="project">
+				<div id="project1" class="large_project_vert">
 					text1
 				</div>
 				<div id="project2" class="project">
-					text2
+					<h3 class="project_title">Connect 4</h3>
+					<p class="project_desc">A game where the goal is to get 4 of the peices in a row. Made in python.
+					</p>
+					<a href="https://replit.com/@EyalBen-dov/Connect-4" class="project_link">link</a>
+
 				</div>
 				<div id="project3" class="project">
 					text3
 				</div>
-				<div id="project4" class="project">
+				<div id="project4" class="large_project_horz">
 					text4
 				</div>
-				<div id="project5" class="project">
+				<div id="project5" class="large_project_horz">
 					text5
 				</div>
 				<div id="project6" class="project">
@@ -72,8 +82,54 @@
 				</div>
 			</div>
 		</div>
+		<div id="skills"></div>
+		<div id="skills_container">
+			<div class="gap"></div>
+			<header>Skills</header>
+			<div class="gap"></div>
+			<div id="skills_list">
+				<div id="skills_left">
+					<div class="skill">
+						<img class="skill_icon" src="img/pythonLogo.svg" alt="python">
+						<p class="skill_text">Python</p>
+					</div>
+					<div class="skill">
+						<img class="skill_icon" src="img/onshapeLogo.png" alt="onshape">
+						<p class="skill_text">Onshape</p>
+					</div>
+					<div class="skill">
+						<img class="skill_icon" src="img/htmlLogo.svg" alt="html">
+						<p class="skill_text">HTML</p>
+					</div>
+				</div>
+				<div id="skills_right">
+					<div class="skill">
+						<img class="skill_icon" src="img/javaLogo.svg" alt="java">
+						<p class="skill_text">Java</p>
+					</div>
+					<div class="skill">
+						<img class="skill_icon" src="img/cssLogo.png" alt="css">
+						<p class="skill_text">CSS</p>
+					</div>
+					<div class="skill">
+						<img class="skill_icon" src="img/javascriptLogo.svg" alt="javascript">
+						<p class="skill_text">JavaScript</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="experience"></div>
+		<div id="experience_container">
+			<div class="gap"></div>
+			<header>Experience</header>
+			<div class="gap"></div>
+			<ul id="experience_list">
+				<li>CRLS Robotics Club Programming Captain</li>
+			</ul>
+		</div>
 	</div>
-  <script src="script.js"></script>
+	<script src="script.js"></script>
 </body>
 
 </html>
+<!-- https://www.desmos.com/calculator/qmwgjfage7 -->

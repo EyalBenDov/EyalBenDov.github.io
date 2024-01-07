@@ -1,14 +1,17 @@
 :root {
-	--background1: #333333;
-	--text_color1: lightgray;
-	--nav_bar_background: #aaaaaa;
-	--nav_link_color: #555555;
+	--background1: #E7ECEF;
+	--text_color1: #274C78;
+	--nav_bar_background: #6096BA;
+	--nav_link_color: #274C78;
 	--nav_link_hover_color: #111111;
-	--projects_header_color: #ffffff;
+	--header_color: #274C78;
 	--projects_background_color: #ffffff;
 	--nav_size: 15em;
+	--nav_height: 4em;
 	--projects_border_radius: 10px;
 	--projects_padding: 10px;
+	--projects_border_color: #274C78;
+	--skill_text_color: #274C78;
 }
 
 html {
@@ -16,6 +19,7 @@ html {
   width: 100%;
   scroll-behavior: smooth;
   margin: 0;
+  font-size: 16px;
 }
 
 
@@ -25,6 +29,7 @@ body {
 	margin: 0;
 	background-color: var(--background1);
 	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box
 }
 .nav-block {
 	height: 3.5rem;
@@ -42,7 +47,7 @@ body {
 nav {
 	top: 0px;
 	width: var(--nav_size);
-	height: 100%;
+	height: 100vh;
 	position: fixed;
 	margin: 0px;
 	left: 0px;
@@ -65,6 +70,7 @@ nav {
 	flex-wrap: nowrap;
 	height: 20vh;
 	gap: 0.5rem;
+	margin-top: 1rem;
 }
 
 
@@ -88,6 +94,7 @@ nav {
 #about_paragraph {
 	color: var(--text_color1);
 	font-size: 1.5rem;
+	line-height: 38px;
 	width: 500px;
 }
 
@@ -99,9 +106,10 @@ nav {
 
 #me {
 	margin-left: 5px;
-	font-family:
 }
-
+.gap {
+	height: 3rem;
+}
 .nav-link {
 	color: var(--nav_link_color);
 	padding: 5px;
@@ -118,21 +126,16 @@ nav {
 #about_container {
 	height: 100vh;
 	left: var(--nav_size);
-	background-color: orange;
+	background-color: #E7ECEF;
 }
 
 #projects_container {
-	height: 100vh;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 2rem;
+	min-height: 100vh;
 	
 }
 
-#projects_header {
-	color: var(--projects_header_color);
+header {
+	color: var(--header_color);
 	position: relative;
 	font-size: 3rem;
 	text-align: center;
@@ -142,7 +145,7 @@ nav {
 
 #projects_grid {
 	width: 60rem;
-	height: 44.6511627907rem;
+	height: 44.625rem; /*height calculator:  https://www.desmos.com/calculator/qmwgjfage7  */
 	margin: 0 auto;
 	display: grid;
 	gap: 1.5rem;
@@ -156,9 +159,27 @@ nav {
 .project {
 	border-radius: var(--projects_border_radius);
 	padding: var(--projects_padding);
-	background-color: var(--projects_background_color);
+	background-color: var(--background1);
+	border: 0.1rem solid var(--projects_border_color);
+	height: 200px;
+	width: 200px;
 }
-
+.large_project_vert {
+	border-radius: var(--projects_border_radius);
+	padding: var(--projects_padding);
+	background-color: var(--background1);
+	border: 0.1rem solid var(--projects_border_color);
+	height: 446px;
+	width: 200px;
+}
+.large_project_horz {
+	border-radius: var(--projects_border_radius);
+	padding: var(--projects_padding);
+	background-color: var(--background1);
+	border: 0.1rem solid var(--projects_border_color);
+	height: 200px;
+	width: 446px;
+}
 #project1 {
 	grid-area: project1;
 	/* height: 25rem; */
@@ -199,4 +220,288 @@ nav {
 
 #project9 {
 	grid-area: project9;
+}
+
+#skills_container {
+	min-height: 100vh;	
+}
+
+.skill_icon {
+	width: 48px;
+	height: 48px;
+}
+
+.skill {
+	/* width: 10rem; */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	flex-wrap: nowrap;
+}
+
+#skills_list {
+	width: 45rem;
+	margin: auto auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	gap: 10rem;
+}
+
+#skills_left, #skills_right {
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	align-items: flex-start;
+	gap: 1.5rem;
+}
+
+.skill_text {
+	color: var(--skill_text_color);
+}
+
+#me-nav {
+	font-size: 1.5rem;
+	position: relative;
+	top: 1rem;
+}
+
+#experience_container {
+	min-height: 100vh;
+}
+
+#experience_list {
+	list-style-type: none;
+	color: var(--text_color1);
+	text-align: center;
+	padding: 0;
+	font-size: 1.5rem;
+}
+
+
+.project_title {
+	margin: 0;
+}
+
+.project_desc {
+	margin-top: 10px;
+}
+
+@media (max-width: 87.5rem) {
+  
+}
+
+@media (max-width: 78rem) {
+	#projects_grid {
+		width: 45rem;
+		height: 60.5rem;
+		margin: 0 auto;
+		display: grid;
+		gap: 1.5rem;
+		grid-template-areas: 
+			'project1 project2 project3'
+			'project1 project4 project4'
+			'project5 project5 project6'
+			'project7 project8 project9';
+
+	}
+}
+
+@media (max-width: 62rem) {
+	nav {
+		  top: 0;
+		  width: 100vw;
+		  height: var(--nav_height);
+		  position: fixed;
+		  margin: 0;
+		  left: 0;
+		  right: 0;
+
+		  background-color: var(--nav_bar_background);
+		  display: flex;
+		  flex-direction: row;
+		  word-wrap: none;
+		  align-items: center;
+		  justify-content: center;
+		  z-index: 1;
+	  }
+	  #profile_picture {
+		  display: none;
+	  }
+	.page {
+		top: var(--nav_height);
+		height: 100vh;
+		right: 0;
+		left: 0;
+		margin: 0px;
+		position: absolute;
+	}
+	#links {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		margin-top: 0;
+		gap: 0.5rem;
+	}
+	#me-nav {
+		display: none
+	}
+
+	
+}
+
+@media (max-width: 48rem) {
+	#projects_grid {
+		width: 25rem;
+		height: 38rem; 
+		margin: auto auto;
+		display: grid;
+		gap: 1rem;
+		grid-template-areas: 
+			'project1 project2'
+			'project1 project3'
+			'project4 project4'
+	}
+	#project9 {
+		display: none;
+	}
+	#project6 {
+		display: none;
+	}
+	#project5 {
+		display: none;
+	}
+	#project8 {
+		display: none;
+	}
+	#project7 {
+		display: none;
+	}
+	#skills_list {
+		width: 25rem;
+	}
+	#projects_container {
+		min-height: 120vh;
+	}
+	.project {
+		height: 169px;
+		width: 169px;
+	}
+	.large_project_vert {
+		height: 377px;
+		width: 169px;
+	}
+	.large_project_horz {
+		height: 169px;
+		width: 377px;
+	}
+	
+}
+
+@media (max-width: 36rem) {
+	#projects_grid {
+		width: 20rem;
+		height: 30.375rem;
+		margin: 0 auto;
+		display: grid;
+		gap: 0.75rem;
+		grid-template-areas: 
+			'project1 project2'
+			'project1 project3'
+			'project4 project4'
+	}
+	#projects_container {
+		min-height: 120vh;
+	}
+	.nav-link {
+		font-size: 1rem;
+	}
+	.project {
+		height: 131px;
+		width: 131px;
+	}
+	.large_project_vert {
+		height: 297px;
+		width: 131px;
+	}
+	.large_project_horz {
+		height: 131px;
+		width: 297px;
+	}
+	.project_title {
+		font-size: 1rem;
+	}
+	.project_desc {
+		font-size: 0.75rem;
+	}
+	.project_link {
+		font-size: 0.75rem;
+	}
+	#skills_list {
+		width: 20rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		gap: 3rem;
+	}
+	#about_paragraph {
+		width: 300px;
+	}
+
+}
+
+@media (max-width: 24rem) {
+	#projects_grid {
+		width: 17rem;
+		height: 25.875rem;
+		margin: 0 auto;
+		display: grid;
+		gap: 0.75rem;
+		grid-template-areas: 
+			'project1 project2'
+			'project1 project3'
+			'project4 project4'
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	#about_paragraph {
+		width: 275px;
+	}
+	.project {
+		height: 107px;
+		width: 107px;
+	}
+	.large_project_vert {
+		height: 249px;
+		width: 107px;
+	}
+	.large_project_horz {
+		height: 107px;
+		width: 249px;
+	}
+	.project_desc {
+		margin-bottom: 0;
+	}
+	.skill_icon {
+		width: 36px;
+		height: 36px;
+	}
+	#skills_list {
+		width: 17rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		gap: 1.5rem;
+	}
+	header {
+		font-size: 1.75rem;
+	}
 }
