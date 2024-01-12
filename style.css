@@ -124,7 +124,7 @@ nav {
 }
 
 #about_container {
-	height: 100vh;
+	min-height: 100vh;
 	left: var(--nav_size);
 	background-color: #E7ECEF;
 }
